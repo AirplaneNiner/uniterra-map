@@ -25,13 +25,13 @@ export class CityMap {
   }
 }
 CityMap.cityTypes = [
-  "Premier",
-  "Governor",
-  "Senator",
-  "Community",
-  "Mayor",
-  "Councillor",
-  "Unranked",
+  "Megacity",
+  "Metropolis",
+  "Large City",
+  "City",
+  "Town",
+  "Village",
+  "Locality",
 ];
 export class Logo extends L.Control {
   onAdd() {
