@@ -18,7 +18,7 @@ class CustomTileLayer extends L.TileLayer {
       zzz += "z";
     }
     if (zzz.length != 0) zzz += "_";
-    const url = `https://dynmap.minecartrapidtransit.net/main/tiles/new/flat/${group.x}_${group.y}/${zzz}${numberInGroup.x}_${numberInGroup.y}.png`;
+    const url = `https://142.4.216.95:8192/main/tiles/tashret/flat/${group.x}_${group.y}/${zzz}${numberInGroup.x}_${numberInGroup.y}.png`;
     return url;
   }
 }
@@ -42,7 +42,7 @@ export function initMap() {
       [-900, -900],
       [900, 900],
     ],
-    attribution: "Minecart Rapid Transit",
+    attribution: "UniTerra",
   }).addTo(map);
   L.control
     .zoom({
