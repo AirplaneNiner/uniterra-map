@@ -20,25 +20,25 @@ export function mapLayers() {
   const { cityLayers, CC, searchLayer } = gcm();
   const map = g().map;
   if (!g().displayTowns) {
-    map.removeLayer(cityLayers.get("Community"));
-    map.removeLayer(cityLayers.get("Premier"));
-    map.removeLayer(cityLayers.get("Governor"));
-    map.removeLayer(cityLayers.get("Senator"));
-    map.removeLayer(cityLayers.get("Mayor"));
-    map.removeLayer(cityLayers.get("Councillor"));
-    map.removeLayer(cityLayers.get("Unranked"));
+    map.removeLayer(cityLayers.get("Megacity"));
+    map.removeLayer(cityLayers.get("Metropolis"));
+    map.removeLayer(cityLayers.get("Large City"));
+    map.removeLayer(cityLayers.get("City"));
+    map.removeLayer(cityLayers.get("Town"));
+    map.removeLayer(cityLayers.get("Village"));
+    map.removeLayer(cityLayers.get("Locality"));
     map.removeLayer(CC);
     return;
   } else {
     map.removeLayer(searchLayer);
     console.log(cityLayers.entries());
-    map.addLayer(cityLayers.get("Community"));
-    map.addLayer(cityLayers.get("Premier"));
-    map.addLayer(cityLayers.get("Governor"));
-    map.addLayer(cityLayers.get("Senator"));
-    map.addLayer(cityLayers.get("Mayor"));
-    map.addLayer(cityLayers.get("Councillor"));
-    map.addLayer(cityLayers.get("Unranked"));
+    map.addLayer(cityLayers.get("Megacity"));
+    map.addLayer(cityLayers.get("Metropolis"));
+    map.addLayer(cityLayers.get("Large City"));
+    map.addLayer(cityLayers.get("City"));
+    map.addLayer(cityLayers.get("Town"));
+    map.addLayer(cityLayers.get("Village"));
+    map.addLayer(cityLayers.get("Locality"));
     map.addLayer(CC);
   }
   // This made stuff hard to use
@@ -77,13 +77,13 @@ export function mapLayers() {
 }
 function mapTowns(towns) {
   const rankColors = {
-    Premier: "#fffc04",
-    Governor: "#08fc04",
-    Senator: "#08ac04",
-    Mayor: "#0804fc",
-    Councillor: "#5084ec",
-    Community: "#781c44",
-    Unranked: "#ffffff",
+    Megacity: "#fffc04",
+    Metropolis: "#08fc04",
+    Large_City: "#08ac04",
+    City: "#0804fc",
+    Town: "#5084ec",
+    Village: "#781c44",
+    Locality: "#ffffff",
   };
   gcm().towns = towns;
   const { cityMarkers, cityLayers } = gcm();
@@ -108,7 +108,7 @@ function mapTowns(towns) {
           color: rankColors[town["Town Rank"]],
           radius: 7,
         }).bindPopup(
-          `Name: ${town.Name}<br>Mayor: ${town.Mayor}<br>Deputy Mayor: ${town["Deputy Mayor"]}<br>Rank: ${town["Town Rank"]}<br><a href="https://mrtrapidroute.com?from=Current+Location&to=${encodeURIComponent(town.Name)}" target="_blank">Navigate to here with RapidRoute</a>`,
+          `Name: ${town.Name}<br>Mayor: ${town.Mayor}<br>Deputy Mayor: ${town["Deputy Mayor"]}<br>Rank: ${town["Town Rank"]}<br>`,
         ),
       );
     }
