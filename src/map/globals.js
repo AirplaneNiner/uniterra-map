@@ -60,7 +60,7 @@ export class Buttons {
       .setPosition("topright")
       .addTo(map);
     const streetMap = L.tileLayer(
-      "https://raw.githubusercontent.com/MRT-Map/map-data/main/tiles/{z}/{x}/{y}.webp",
+      "https://raw.githubusercontent.com/AirplaneNiner/uniterra-map/main/tiles/{z}/{x}/{y}.webp",
       { maxZoom: 9 },
     );
     this.streetMap = L.easyButton(
