@@ -31,4 +31,3 @@ void initMapCities();
 void initTownSearch();
 void initWaypoints();
 void initAirways();
-void initMapWarps();
