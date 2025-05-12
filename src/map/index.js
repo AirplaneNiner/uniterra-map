@@ -8,7 +8,6 @@ import { initMap } from "../map.js";
 import "./../style.css";
 import { Globals } from "./globals.js";
 import { initMapCities } from "./map-cities.js";
-import { initTownSearch } from "./townsearch.js";
 import "./ui.js";
 import { initAirways, initWaypoints } from "./waypoint-viewer.js";
 import { initMapWarps } from "./map-warps.js";
@@ -28,6 +27,5 @@ L.Icon.Default.mergeOptions({
 });
 window.mapGlobals = new Globals(initMap());
 void initMapCities();
-void initTownSearch();
 void initWaypoints();
 void initAirways();
