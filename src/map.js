@@ -18,7 +18,7 @@ class CustomTileLayer extends L.TileLayer {
       zzz += "z";
     }
     if (zzz.length != 0) zzz += "_";
-    const url = `http://142.4.216.95:8192/tiles/Tashret/flat/${group.x}_${group.y}/${zzz}${numberInGroup.x}_${numberInGroup.y}.png`;
+    const url = `http://142.4.216.95:8192/tiles/Tashret/flat/${group.x}_${group.y}/${zzz}${numberInGroup.x}_${numberInGroup.y}.jpg`;
     return url;
   }
 }
