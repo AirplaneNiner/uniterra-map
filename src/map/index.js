@@ -9,8 +9,6 @@ import "./../style.css";
 import { Globals } from "./globals.js";
 import { initMapCities } from "./map-cities.js";
 import "./ui.js";
-import { initAirways, initWaypoints } from "./waypoint-viewer.js";
-import { initMapWarps } from "./map-warps.js";
 // https://stackoverflow.com/a/58254190
 // @ts-expect-error fix esbuild not making these load by themselves
 delete L.Icon.Default.prototype._getIconUrl;
@@ -27,5 +25,3 @@ L.Icon.Default.mergeOptions({
 });
 window.mapGlobals = new Globals(initMap());
 void initMapCities();
-void initWaypoints();
-void initAirways();
